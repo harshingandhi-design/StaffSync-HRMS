@@ -1,0 +1,250 @@
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #e0e7ff;
+  --indigo: #6366f1;
+  --purple: #8b5cf6;
+  --bg-dashboard: #f8fafc;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-dashboard);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+.max-w-400 { max-width: 400px; }
+.max-w-500 { max-width: 500px; }
+.max-w-600 { max-width: 600px; }
+.max-w-700 { max-width: 700px; }
+.max-w-850 { max-width: 850px; }
+.max-w-150 { max-width: 150px; }
+.max-w-160 { max-width: 160px; }
+.max-w-200 { max-width: 200px; }
+.max-w-250 { max-width: 250px; }
+
+.text-xs { font-size: 0.75rem; }
+.letter-spacing { letter-spacing: 0.08em; }
+.white-space-pre-line { white-space: pre-line; }
+
+/* Gradients */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+}
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+}
+.bg-gradient-indigo {
+  background: linear-gradient(135deg, #3730a3 0%, #4f46e5 100%);
+}
+.bg-gradient-purple {
+  background: linear-gradient(135deg, #581c87 0%, #7c3aed 100%);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.text-indigo { color: var(--indigo) !important; }
+.bg-indigo { background-color: var(--indigo) !important; }
+.bg-indigo-subtle { background-color: #e0e7ff !important; }
+.btn-outline-indigo {
+  color: var(--indigo);
+  border-color: var(--indigo);
+}
+.btn-outline-indigo:hover {
+  background-color: var(--indigo);
+  color: #fff;
+}
+
+.text-purple { color: var(--purple) !important; }
+.bg-purple { background-color: var(--purple) !important; }
+.bg-purple-subtle { background-color: #ede9fe !important; }
+.btn-purple {
+  background-color: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+}
+.btn-purple:hover {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+}
+
+/* Brand Logo */
+.brand-logo-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Avatars */
+.avatar-img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+}
+.avatar-placeholder {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+.avatar-lg {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+}
+.avatar-placeholder-lg {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.avatar-xl {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}
+.avatar-placeholder-xl {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+/* Role Badges */
+.badge-hr {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+  border: 1px solid #e9d5ff;
+}
+.badge-manager {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+.badge-employee {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-height: calc(100vh - 57px);
+  position: sticky;
+  top: 57px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1020;
+}
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1010;
+  }
+}
+
+.hover-bg:hover {
+  background-color: #f1f5f9;
+  color: var(--primary) !important;
+}
+
+/* Stat Icon Boxes */
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* Feature Icon Box */
+.feature-icon-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Lift */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Modal Custom Backdrop */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  z-index: 1060;
+  backdrop-filter: blur(4px);
+}
+
+/* Notifications Dropdown */
+.notif-dropdown {
+  width: 320px;
+  z-index: 1050;
+}
+.notif-list {
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+/* Auth Card */
+.auth-card {
+  max-width: 460px;
+  width: 100%;
+}
