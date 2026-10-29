@@ -109,7 +109,7 @@ export default function HrDashboard() {
     <div className="dashboard-container">
       {/* Welcome Banner */}
       <div className="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-gradient-purple text-white">
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
           <div>
             <span className="badge bg-white-20 text-white px-3 py-1 rounded-pill small mb-2 d-inline-block">
               StaffSync Global Operations · HR Administration
@@ -121,11 +121,11 @@ export default function HrDashboard() {
               Manage organization workforce, track real-time attendance, and handle executive leave workflows.
             </p>
           </div>
-          <div className="d-flex gap-2">
-            <button className="btn btn-light btn-sm fw-semibold shadow-sm" onClick={() => setShowAddEmpModal(true)}>
+          <div className="d-flex flex-wrap gap-2 flex-shrink-0">
+            <button className="btn btn-light btn-sm fw-semibold shadow-sm text-nowrap" onClick={() => setShowAddEmpModal(true)}>
               <i className="bi bi-person-plus-fill me-1"></i> Add Employee
             </button>
-            <button className="btn btn-outline-light btn-sm fw-semibold" onClick={() => setShowAnnModal(true)}>
+            <button className="btn btn-outline-light btn-sm fw-semibold text-nowrap" onClick={() => setShowAnnModal(true)}>
               <i className="bi bi-megaphone-fill me-1"></i> Post Announcement
             </button>
           </div>

@@ -56,7 +56,7 @@ export default function ManagerDashboard() {
     <div className="dashboard-container">
       {/* Welcome Banner */}
       <div className="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-gradient-indigo text-white">
-        <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div className="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
           <div>
             <span className="badge bg-white-20 text-white px-3 py-1 rounded-pill small mb-2 d-inline-block">
               {user?.employeeProfile?.department || 'Department'} · Team Management Portal
@@ -68,11 +68,11 @@ export default function ManagerDashboard() {
               Manage your team members, review leave requests, and oversee team performance.
             </p>
           </div>
-          <div className="d-flex gap-2">
-            <Link to="/attendance" className="btn btn-light btn-sm fw-semibold">
+          <div className="d-flex flex-wrap gap-2 flex-shrink-0">
+            <Link to="/attendance" className="btn btn-light btn-sm fw-semibold text-nowrap">
               <i className="bi bi-clock-history me-1"></i> Team Attendance
             </Link>
-            <Link to="/trainings" className="btn btn-outline-light btn-sm fw-semibold">
+            <Link to="/trainings" className="btn btn-outline-light btn-sm fw-semibold text-nowrap">
               <i className="bi bi-plus-circle me-1"></i> Assign Training
             </Link>
           </div>
